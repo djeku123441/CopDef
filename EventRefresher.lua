@@ -1,0 +1,10 @@
+local player = game.Players.LocalPlayer
+game.ReplicatedStorage.Events.Reset.OnClientEvent:Connect(function()
+	game.ReplicatedStorage.Events.Reset:FireServer()
+end)
+game.ReplicatedStorage.Events.EndRound.OnClientEvent:Connect(function()
+	game.ReplicatedStorage.Events.EndRound:FireServer()
+end)
+game.ReplicatedStorage.Events.newplayeradded.OnClientEvent:Connect(function()
+	game.ReplicatedStorage.Events.newplayeradded:FireServer(player)
+end)
