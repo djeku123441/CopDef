@@ -14,5 +14,5 @@ game.Players.PlayerAdded:Connect(function(player)
 	end
 end)
 game.Players.PlayerRemoving:Connect(function(player)
-	dataStore:SetAsync("id_"..player.UserId, {player.Values.Wins.Value})
+	dataStore:SetAsync("id_"..player.UserId, {player.leaderstats.Wins.Value})
 end)
